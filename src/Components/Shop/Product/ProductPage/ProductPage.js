@@ -16,7 +16,7 @@ function ProductPage({ match }) {
   }
 
   useEffect(() => {
-    axios.get(`http://localhost:4000/product/getProductsByID/${id}`)
+    axios.get(`/product/getProductsByID/${id}`)
       .then(res => { console.log(res.data.payload); setProduct(res.data.payload) })
       .catch(err => console.log(err))
   }, [])
