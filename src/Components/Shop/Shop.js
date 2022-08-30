@@ -11,7 +11,7 @@ function Shop() {
   let [productsArray, setProductsArray] = useState([])
 
   useEffect(() => {
-    let products = axios.get('http://47.254.82.226:13371/product/getProducts')
+    let products = axios.get('/product/getProducts')
     products.then(res => setProductsArray(res.data)).catch(err => console.log(err))
   }, [])
 
